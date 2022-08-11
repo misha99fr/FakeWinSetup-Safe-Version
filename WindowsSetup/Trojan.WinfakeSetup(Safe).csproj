@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6CED3A0-FB5D-43E6-B48F-C6B2DD78668D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsSetup</RootNamespace>
+    <AssemblyName>Trojan.WinfakeSetup%28Safe%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1000.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseOS.Designer.cs">
+      <DependentUpon>ChooseOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recovery.Designer.cs">
+      <DependentUpon>Recovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup2.Designer.cs">
+      <DependentUpon>Setup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="license.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="license.Designer.cs">
+      <DependentUpon>license.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseType.Designer.cs">
+      <DependentUpon>ChooseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partition.Designer.cs">
+      <DependentUpon>Partition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Copyfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Copyfiles.Designer.cs">
+      <DependentUpon>Copyfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restart.Designer.cs">
+      <DependentUpon>Restart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup.Designer.cs">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warning.Designer.cs">
+      <DependentUpon>Warning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChooseOS.resx">
+      <DependentUpon>ChooseOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recovery.resx">
+      <DependentUpon>Recovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup2.resx">
+      <DependentUpon>Setup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="license.resx">
+      <DependentUpon>license.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseType.resx">
+      <DependentUpon>ChooseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partition.resx">
+      <DependentUpon>Partition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copyfiles.resx">
+      <DependentUpon>Copyfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restart.resx">
+      <DependentUpon>Restart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warning.resx">
+      <DependentUpon>Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_cli.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard-disk-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows_10_Logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1000.ico" />
+    <None Include="Resources\turnoff.png" />
+    <None Include="Resources\winpe.jpg" />
+    <None Include="Resources\Trouble.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\Continue.png" />
+    <None Include="Resources\Снимок экрана 2022-08-06 202744.png" />
+    <None Include="Resources\Снимок экрана 2022-08-06 202657.png" />
+    <None Include="Resources\blue.png" />
+    <None Include="Resources\m1000x1000.jpg" />
+    <None Include="Resources\DD 09-9.png" />
+    <None Include="Resources\DD 09.ico" />
+    <None Include="Resources\411.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
